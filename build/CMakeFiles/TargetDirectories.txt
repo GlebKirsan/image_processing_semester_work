@@ -1,4 +1,0 @@
-/home/gleb/github/image_processing_semester_work/build/CMakeFiles/edit_cache.dir
-/home/gleb/github/image_processing_semester_work/build/CMakeFiles/semester_work.dir
-/home/gleb/github/image_processing_semester_work/build/CMakeFiles/rebuild_cache.dir
-/home/gleb/github/image_processing_semester_work/build/CMakeFiles/score.dir
