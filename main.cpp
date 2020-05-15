@@ -115,19 +115,21 @@ void SaveImage(const string& directory,
 	imwrite(path, image);
 }
 
+string GetFilename(const string& path) {
+	return path.substr(path.rfind('/'));
+}
+
 int main() {
 	const vector<string> image_paths = GetImagePaths("../images");
 	CheckPaths(image_paths);
-	int i = 0;
 	for (const string& path : image_paths) {
 		cerr << "Reading source image " << path << endl;
 		Mat source = imread(path);
 		Mat noised = AddNoise(source);
-		string filename = to_string(i) + ".png";
+		string filename = GetFilename(path);
 		SaveImage("../noised", filename, noised);
 		Mat concat = StackHorizontal(source, noised);
 		SaveImage("../concat", filename, concat);
-		++i;
 	}
 	return 0;
 }

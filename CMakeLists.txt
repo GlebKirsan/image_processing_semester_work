@@ -7,5 +7,7 @@ find_package(OpenCV REQUIRED)
 
 include_directories(${OpenCV_INCLUDE_DIRS})
 add_executable(${PROJECT_NAME} main.cpp ini.cpp)
+add_executable(score score.cpp)
 
 target_link_libraries(${PROJECT_NAME} PRIVATE ${OpenCV_LIBS})
+target_link_libraries(score PRIVATE ${OpenCV_LIBS})
